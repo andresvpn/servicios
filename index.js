@@ -23,10 +23,12 @@ app.use('/api', api)
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "view", "bio.html"));
 });
-
 app.get("*", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "view", "error404.html"));
 });
+
+
+
 
 app.listen(PORT, () => {
      const { GREEN, BLUE, RED, WHITE } = require('./lib/color.js');

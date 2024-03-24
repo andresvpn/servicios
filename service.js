@@ -26,6 +26,14 @@ app.get("/netflix", (req, res) => {
   res.sendFile(__dirname + "/view/netflix.html");
 });
 
+app.get("/gpt4", (req, res) => {
+  res.sendFile(__dirname + "/view/gpt4.html");
+});
+
+app.get("/img1", (req, res) => {
+  res.sendFile(__dirname + "/view/img1.html");
+});
+
 
 app.get("/payment", (req, res) => {
 res.sendFile(__dirname + "/view/pago.html");
