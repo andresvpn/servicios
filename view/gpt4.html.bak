@@ -191,11 +191,8 @@
     }
 
     function formatResponse(text) {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  let formattedText = text.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
-  formattedText = formattedText.replace(/\n/g, '<br>');
-  return formattedText;
-}
+      return text.replace(/\n/g, '<br>');
+    }
 
   </script>
 </body>
