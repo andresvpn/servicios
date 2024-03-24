@@ -25,8 +25,8 @@ body {
 }
 
 .header {
-    background-color: #0088cc; /* Cambiado a color del HTML 2 */
-    color: white; /* Cambiado a color del HTML 2 */
+    background-color: #075e54;
+    color: white;
     padding: 15px;
     text-align: center;
     font-size: 24px;
@@ -140,7 +140,7 @@ body {
 </head>
 <body>
 <div class="container">
-    <div class="header">IMAGEN IA 1</div> <!-- Cambiado a clase del HTML 2 -->
+    <div class="header">IMAGEN IA 1</div>
     <div class="chat-container" id="chatContainer">
         <div class="bubble response-bubble">¡Describe la idea para crear la imagen!</div>
     </div>
