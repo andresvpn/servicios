@@ -131,8 +131,8 @@ h1 {
 </head>
 <body>
 <div class="container">
-  <H1>SERVICIOS</h1>
-  <input type="text" id="searchInput" class="search-input" placeholder="Buscar servicio...">
+  <H1>AndresBook</h1>
+  <input type="text" id="searchInput" class="search-input" placeholder="Buscar libros...">
   <div id="bookList">
     <!-- Libros se cargarán aquí -->
   </div>
@@ -140,18 +140,18 @@ h1 {
 <script>
   const libros = [
     {
-      titulo: 'NETFLIX',
-      imagen: 'https://telegra.ph/file/31f98c8087510b3a22c9a.jpg',
-      bio: 'Netflix es un servicio de streaming por suscripción que les permite a sus miembros ver series y películas en un dispositivo con conexión a internet. En función del plan que tengas, también puedes descargar series y películas en un dispositivo con iOS, Android, o Windows 10 y verlas sin conexión a internet.',
-      url: '/service/netflix',
-      autor: '$17.000'
+      titulo: 'Yo antes de ti',
+      imagen: 'https://telegra.ph/file/857cf1be207a8eb8c8937.jpg',
+      bio: 'Yo antes de ti reúne a dos personas que no podrían tener menos en común en una novela conmovedoramente romántica con una pregunta: ¿Qué decidirías cuando hacer feliz a la persona a la que amas significa también destrozarte el corazón?',
+      url: '/api/yo-antes-de-ti',
+      autor: 'Jojo Moyes'
     },
     {
-      titulo: 'MAX',
-      imagen: 'https://telegra.ph/file/c3d0d9cce80d687f74481.jpg',
-      bio: 'Max es una plataforma de streaming propiedad de la compañía Warner. Discovery, que es cómo se llamó a la empresa resultante de la fusión entre Warner Bros y Discovery. Realmente, Max es producto de la unión entre Discovery+ y HBO Max. Oficialmente fue dada a conocer en abril de 2023',
-      url: '/service/max',
-      autor: '$12.000'
+      titulo: 'Don Quijote de la Mancha',
+      imagen: 'https://telegra.ph/file/9bc8f8b2ee08d629a0efb.jpg',
+      bio: 'Don Quijote de la Mancha es una novela escrita por el español Miguel de Cervantes Saavedra. Publicada su primera parte con el título de El ingenioso hidalgo don Quijote de la Mancha a comienzos de 1605, es una de las obras más destacadas de la literatura española y la literatura universal, y una de las más traducidas.',
+      url: 'https://example.com/don_quijote',
+      autor: 'Miguel de Cervantes Saavedra'
     }
   ];
 
@@ -178,7 +178,7 @@ h1 {
 
       const authorElement = document.createElement('div');
       authorElement.classList.add('book-author');
-      authorElement.textContent = 'VALOR: ' + libro.autor;
+      authorElement.textContent = 'Autor: ' + libro.autor;
       infoElement.appendChild(authorElement);
 
       const bioElement = document.createElement('div');
@@ -187,7 +187,7 @@ h1 {
       infoElement.appendChild(bioElement);
      
      const textElement = document.createElement('span');
-textElement.textContent = 'Informacion ';
+textElement.textContent = 'Sinopsis ';
 infoElement.appendChild(textElement);
       
       const iconElement = document.createElement('i');
@@ -198,7 +198,7 @@ infoElement.appendChild(textElement);
       urlElement.classList.add('book-url');
       urlElement.href = libro.url;
       urlElement.target= '_blank';
-      urlElement.textContent = 'ADQUIRIR';
+      urlElement.textContent = 'DESCARGAR';
       infoElement.appendChild(urlElement);
       
      

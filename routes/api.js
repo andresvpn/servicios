@@ -18,7 +18,9 @@ router.get('/video-edit3', (req, res) => {
     const videoPath = path.join(__dirname, 'videos', 'edit.mp4');
     res.sendFile(videoPath);
 });
-
+router.get('/yo-antes-de-ti', (req, res) => {
+    res.sendFile(__path + '/lib/yo_antes_de_ti.pdf');
+});
 
 module.exports = router
 

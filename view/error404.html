@@ -3,98 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>API Texto</title>
+<title>ANDRES-VPN</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f8f9fa;
+        overflow: hidden; /* Evita la barra de desplazamiento vertical */
+        position: relative;
+    }
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative; /* Para que los elementos internos sean posicionados relativos a este contenedor */
+        z-index: 1; /* Para estar sobre las olas */
+    }
+    .profile-img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+    .social-icons {
+        margin-top: 20px;
+    }
+    .social-icons a {
+        color: #333;
+        text-decoration: none;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+    .social-icons a:hover {
+        color: #f00; /* Cambia el color al pasar el mouse */
+        transform: scale(1.2); /* Efecto de aumento de tamaño */
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .btn:hover {
+        background-color: #0056b3; /* Cambia el color al pasar el mouse */
+    }
+    
+    .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% del ancho de la ventana */
+    height: 100vh; /* 100% de la altura de la ventana */
+    overflow: hidden;
+    z-index: -1;
 }
 
-.container {
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+#video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar el video */
+    min-width: 100%;
+    min-height: 100%;
 }
 
-.input-container {
-    margin-bottom: 20px;
-}
-
-.input-container input {
-    padding: 10px;
-    width: calc(100% - 80px);
-    font-size: 16px;
-    border: 1px solid #00bcd4;
-    border-radius: 5px 0 0 5px;
-    background-color: #f8f8f8;
-    color: #333333;
-    outline: none;
-}
-
-.button {
-    padding: 10px 20px;
-    background-color: #00bcd4;
-    color: #ffffff;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #0097a7;
-}
-
-.response-container {
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    display: none;
-}
-
-.response-container p {
-    margin: 0;
-    font-size: 18px;
-    color: #333333;
-}
-
-.response-container.show {
-    display: block;
-}
 </style>
 </head>
 <body>
-<div class="container">
-    <h1 style="color: #00bcd4; margin-bottom: 20px;">Ingrese un texto</h1>
-    <div class="input-container">
-        <input type="text" id="textInput" placeholder="Escriba algo...">
-        <button class="button" onclick="fetchData()">Enviar</button>
+    <div class="video-container">
+        <video autoplay muted loop id="video-bg">
+            <source src="/api/video-edit3" type="video/mp4">
+        </video>
+    <div class="container">
+        <img class="profile-img" src="https://telegra.ph/file/8e7046bdc9608ea9a8edf.jpg" alt="Profile Picture">
+        <h1>ERROR 404</h1>
+        <p>Esta página no se encuentra disponible</p>
+        
+        <a href="/service" class="btn" target="_blank">SERVICIOS</a>
     </div>
-    <div class="response-container" id="responseContainer">
-        <p id="responseText"></p>
     </div>
-</div>
-
-<script>
-function fetchData() {
-    const textInput = document.getElementById('textInput').value;
-    fetch(`https://aemt.me/openai?text=${textInput}`)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('responseText').textContent = data.result;
-            document.getElementById('responseContainer').classList.add('show');
-        })
-        .catch(error => console.error('Error:', error));
-}
-</script>
 </body>
 </html>
