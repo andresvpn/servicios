@@ -130,7 +130,7 @@
     <div class="container">
         <img class="icon" src="https://telegra.ph/file/bd3c59d36ea293c48834c.jpg" alt="Icono del producto">
         <h1 class="title">NETFLIX</h1>
-        <p class="price">Valor: <span style="font-weight: bold; color: #007bff;">$17.000</span></p>
+        <p class="price">Valor: <span style="font-weight: bold; color: #007bff;">$12.000</span></p>
         <div class="description-panel" onclick="expandPanel(this)">
             <p class="description">Netflix es un servicio de streaming por suscripción que les permite a sus miembros ver series y películas en un dispositivo con conexión a internet. En función del plan que tengas, también puedes descargar series y películas en un dispositivo con iOS, Android, o Windows 10 y verlas sin conexión a internet.</p>
         </div>

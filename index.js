@@ -29,6 +29,12 @@ app.get("*", (req, res) => {
 
 
 
+/////
+
+
+// Estructura de datos para almacenar los enlaces acortados
+
+/////
 
 app.listen(PORT, () => {
      const { GREEN, BLUE, RED, WHITE } = require('./lib/color.js');
